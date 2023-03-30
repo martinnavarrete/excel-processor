@@ -20,8 +20,7 @@ import {
   updateFileStatus,
 } from '../repository/file.repository';
 
-//eslint-disable-next-line @typescript-eslint/no-explicit-any
-const handleUploadedFile = async (file: any, csvFormat: Map<string, ColumnFormatDto>): Promise<UploadedFileResponseDto> => {
+const handleUploadedFile = async (file: string, csvFormat: Map<string, ColumnFormatDto>): Promise<UploadedFileResponseDto> => {
   const fileInfo = new FileInfoModel({
     format: csvFormat,
   });
